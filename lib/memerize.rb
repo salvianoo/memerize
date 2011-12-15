@@ -12,7 +12,8 @@ class Memerize
       :fry => "images/fry_base.jpg",
       :yuno => "images/yuno_base.jpg",
       :falone => "images/falone_base.jpg",
-      :successkid => "images/successkid_base.jpg"
+      :successkid => "images/successkid_base.jpg",
+      :facebookgirl => "images/facebookgirl_base.jpg"
     }
     self.meme_name = ARGV[0]
     self.text_top = ARGV[1]
