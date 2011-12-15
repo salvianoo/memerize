@@ -1,5 +1,4 @@
-#!/usr/bin/env ruby
-
+require 'rubygems'
 require 'RMagick'
 include Magick
 
@@ -8,12 +7,12 @@ class Memerize
 
   def initialize
     self.memes = {
-      :cao => "images/cao_base.jpg",
-      :fry => "images/fry_base.jpg",
-      :yuno => "images/yuno_base.jpg",
-      :falone => "images/falone_base.jpg",
-      :successkid => "images/successkid_base.jpg",
-      :facebookgirl => "images/facebookgirl_base.jpg"
+      :cao => "/cao_base.jpg",
+      :fry => "/fry_base.jpg",
+      :yuno => "/yuno_base.jpg",
+      :falone => "/falone_base.jpg",
+      :successkid => "/successkid_base.jpg",
+      :facebookgirl => "/facebookgirl_base.jpg"
     }
     self.meme_name = ARGV[0]
     self.text_top = ARGV[1]
@@ -22,7 +21,8 @@ class Memerize
   end
 
   def create_meme()
-    image = ImageList.new(@memes[@meme_name.to_sym])
+    dir_images = File.expand_path(File.dirname(__FILE__) + '/../lib/images')
+    image = ImageList.new(dir_images + @memes[@meme_name.to_sym])
     text = Draw.new
     text.pointsize = 46
     text.stroke = "black"
@@ -40,5 +40,3 @@ class Memerize
     image.write("#{self.meme_name}.jpg")
   end
 end
-
-Memerize.new
