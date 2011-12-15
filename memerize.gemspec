@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "memerize"
-  s.version     = "0.1"
+  s.version     = "0.2"
   s.authors     = ["Salviano Ludgerio"]
   s.email       = ["salviano.lfg@gmail.com"]
 
