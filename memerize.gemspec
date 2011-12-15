@@ -29,7 +29,6 @@ Gem::Specification.new do |s|
   s.description = %q{Memerize is a ordinary Gem for generate meme images and have fun.}
 
   s.homepage    = %q{http://github.com/salvianoo/memerize}
-  s.rubyforge_project = "memerize"
 
   s.add_dependency "rmagick"
 
