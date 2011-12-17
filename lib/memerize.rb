@@ -14,7 +14,7 @@ class Memerize
       :successkid => "/successkid_base.jpg",
       :facebookgirl => "/facebookgirl_base.jpg"
     }
-    @meme_name, @text_top ,@text_footer = ARGV[0], ARGV[1], ARGV[2]
+    @meme_name, @text_top, @text_footer = ARGV[0], ARGV[1], ARGV[2]
     create_meme()
   end
 
