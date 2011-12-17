@@ -14,9 +14,7 @@ class Memerize
       :successkid => "/successkid_base.jpg",
       :facebookgirl => "/facebookgirl_base.jpg"
     }
-    self.meme_name = ARGV[0]
-    self.text_top = ARGV[1]
-    self.text_footer = ARGV[2]
+    @meme_name, @text_top ,@text_footer = ARGV[0], ARGV[1], ARGV[2]
     create_meme()
   end
 
@@ -37,6 +35,6 @@ class Memerize
     text.annotate(image, 0, 0, 0, 9, self.text_footer) {
       self.gravity = SouthGravity
     }
-    image.write("#{self.meme_name}.jpg")
+    image.write("#{@meme_name}.jpg")
   end
 end
